@@ -22,7 +22,7 @@
             "isBuildCommand": true,
             "suppressTaskName": true,            
             "args": [
-                "\"sshpass -p 'onioneer' scp ./bin/pulser.out root@192.168.1.8:~/\""
+                "\"sshpass -p 'onioneer' scp pulser.out root@192.168.1.8:~/\""
             ]
         }
     ]
