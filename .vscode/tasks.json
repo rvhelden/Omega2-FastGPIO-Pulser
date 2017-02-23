@@ -1,0 +1,29 @@
+{
+    "version": "0.1.0",
+    "command": "c:\\Windows\\sysnative\\bash.exe",
+    "isShellCommand": true,
+    "echoCommand": true,
+    "args": [
+        "--login",
+        "-c"
+    ],
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "Build",
+            "isBuildCommand": true,
+            "suppressTaskName": true,
+            "args": [
+                "\"mkdir ./bin;mipsel-openwrt-linux-musl-g++ -o ./bin/pulser.out main.cpp /mnt/d/Projects/fast-gpio/src/fastgpioomega2.cpp /mnt/d/Projects/fast-gpio/src/module.cpp -I /mnt/d/Projects/fast-gpio/include -I $LEDE_INCLUDE -std=c++17\""
+            ]
+        },
+        {
+            "taskName": "Copy",
+            "isBuildCommand": true,
+            "suppressTaskName": true,            
+            "args": [
+                "\"sshpass -p 'onioneer' scp ./bin/pulser.out root@192.168.1.8:~/\""
+            ]
+        }
+    ]
+}

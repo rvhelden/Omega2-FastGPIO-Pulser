@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "d:/Projects/Lede/staging_dir/toolchain-mipsel_24kc_gcc-5.4.0_musl/include/*",
+                "d:/Projects/fast-gpio/include/*"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ]
+}
