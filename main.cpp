@@ -28,10 +28,10 @@ int start(int pin, int repeat, int pause)
     }
 }
 
-void pulse(FastGpioOmega2 *gpioObj, int pin, int pause)
+void pulse(FastGpioOmega2 *gpio, int pin, int pause)
 {
-    gpioObj->Set(pin, HIGH);
+    gpio->Set(pin, HIGH);
     usleep(pause);
-    gpioObj->Set(pin, LOW);
+    gpio->Set(pin, LOW);
     usleep(pause);
 }
