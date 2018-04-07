@@ -19,13 +19,15 @@ int main(int argc, char **argv)
 int start(int pin, int repeat, int pause)
 {
     FastGpioOmega2 *gpio = new FastGpioOmega2();
-	gpio->SetDirection(pin, 1);
+    gpio->SetDirection(pin, 1);
 
     for (int i = 0; i < repeat; i++)
     {
         printf("Pulsed for the %dth time\n", i + 1);
         pulse(gpio, pin, pause);
     }
+	
+    delete gpoi;
 }
 
 void pulse(FastGpioOmega2 *gpio, int pin, int pause)
